@@ -1,10 +1,13 @@
-# <Project Name>
-
+# StoryTap API
+[![Dependency Status](https://gemnasium.com/semadevelopment/storytap-api.png)](https://gemnasium.com/semadevelopment/storytap-api)
+[![Code Climate](https://codeclimate.com/github/semadevelopment/storytap-api.png)](https://codeclimate.com/github/semadevelopment/storytap-api)
+[![Build Status](https://secure.travis-ci.org/semadevelopment/storytap-api.png)](http://travis-ci.org/semadevelopment/storytap-api)
+[![Coverage Status](https://coveralls.io/repos/semadevelopment/storytap-api/badge.png?branch=master)](https://coveralls.io/r/semadevelopment/storytap-api)
 ## Getting Setup
 
 ```bash
 # Checkout the repo
-git clone git@github.com:highgroove/<project>.git
+git clone git@github.com:semadevelopment/storytap-api.git
 
 # Install gem dependencies
 gem install bundler
