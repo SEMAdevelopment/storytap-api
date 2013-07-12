@@ -1,21 +1,23 @@
 source 'https://rubygems.org'
-gem 'rails', '4.0.0'
-gem 'pg'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+ruby '2.0.0'
+
+gem 'bootstrap-sass'
+gem 'coffee-rails'
+gem 'foreman'
+gem 'jbuilder'
 gem 'jquery-rails'
+gem 'pg'
+gem 'rails', '4.0.0'
+gem 'rails_12factor'
+gem 'sass-rails'
+gem 'slim-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'uglifier'
+gem 'unicorn'
+
 group :doc do
   gem 'sdoc', require: false
 end
-ruby '2.0.0'
-
-gem 'bootstrap-sass', '~> 2.0.4.0'
-gem 'foreman'
-gem 'unicorn'
-gem 'slim-rails'
 group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
