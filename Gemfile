@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 gem 'bootstrap-sass'
 gem 'coffee-rails'
+gem 'coveralls'
 gem 'foreman'
 gem 'jbuilder'
 gem 'jquery-rails'
