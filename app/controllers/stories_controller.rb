@@ -11,3 +11,4 @@ class StoriesController < ApplicationController
     respond_with @story
   end
 end
+

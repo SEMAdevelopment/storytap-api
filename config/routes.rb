@@ -4,6 +4,9 @@ StorytapApi::Application.routes.draw do
   devise_scope :users do
     post "users/authenticate" => "authenticate#index"
   end
-  resources :stories
+  resources :users, only: [:show]
+  resources :stories do
+    resources :episodes
+  end
   root to: 'home#index'
 end
