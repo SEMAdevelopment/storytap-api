@@ -5,4 +5,9 @@ class StoriesController < ApplicationController
     @stories = Story.all.page(params[:page])
     respond_with @stories
   end
+
+  def show
+    @story = Story.find(params[:id])
+    respond_with @story
+  end
 end
