@@ -4,7 +4,6 @@ class CreateStories < ActiveRecord::Migration
       t.string :title
       t.belongs_to :author, index: true
       t.text :description
-      t.has_many :episodes
 
       t.timestamps
     end

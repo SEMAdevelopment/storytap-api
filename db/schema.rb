@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130713151002) do
+ActiveRecord::Schema.define(version: 20130713152832) do
+
+  create_table "stories", force: true do |t|
+    t.string   "title"
+    t.integer  "author_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "stories", ["author_id"], name: "index_stories_on_author_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

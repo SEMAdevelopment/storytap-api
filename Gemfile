@@ -16,6 +16,7 @@ gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
+gem 'will_paginate'
 
 group :doc do
   gem 'sdoc', require: false
