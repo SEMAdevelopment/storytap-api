@@ -8,4 +8,4 @@ script:
     - bundle exec rake db:test:prepare
     - bundle exec rake
 before_script:
-    - psql -c 'create database ccf_test' -U postgres
+    - psql -c 'create database "storytap-api_test"' -U postgres
