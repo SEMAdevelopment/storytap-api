@@ -21,25 +21,18 @@ html lang="en"
           a.brand href="#" Home
           .container.nav-collapse
             ul.nav
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              - if current_user
+                li= link_to "Log Out", destroy_user_session_path
+              - else
+                li= link_to "Log In", new_user_session_path
+              - if current_user.try(:admin?)
+                li= link_to "Admin", admin_root_path
 
     .container
 
       .content
         == render "shared/messages"
-        .row
-          .span9
-            = yield
-          .span3
-            .well.sidebar-nav
-              h3 Sidebar
-              ul.nav.nav-list
-                li.nav-header Sidebar
-                li= link_to "Link 1", "/path1"
-                li= link_to "Link 2", "/path2"
-                li= link_to "Link 3", "/path3"
+        = yield
     
       footer
         p &copy; 2012

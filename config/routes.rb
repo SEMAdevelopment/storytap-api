@@ -6,7 +6,11 @@ StorytapApi::Application.routes.draw do
   end
   resources :users, only: [:show]
   resources :stories do
-    resources :episodes
+    resources :episodes do
+      resources :scenes do
+        get :preview
+      end
+    end
   end
   root to: 'home#index'
 end
