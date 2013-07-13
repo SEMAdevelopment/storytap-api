@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130713192445) do
+ActiveRecord::Schema.define(version: 20130713195809) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -38,9 +38,11 @@ ActiveRecord::Schema.define(version: 20130713192445) do
     t.datetime "updated_at"
     t.integer  "story_id"
     t.string   "name"
+    t.integer  "transition_id"
   end
 
   add_index "episodes", ["story_id"], name: "index_episodes_on_story_id", using: :btree
+  add_index "episodes", ["transition_id"], name: "index_episodes_on_transition_id", using: :btree
 
   create_table "scenes", force: true do |t|
     t.integer  "episode_id"
@@ -62,6 +64,16 @@ ActiveRecord::Schema.define(version: 20130713192445) do
   end
 
   add_index "stories", ["author_id"], name: "index_stories_on_author_id", using: :btree
+
+  create_table "transitions", force: true do |t|
+    t.string   "name"
+    t.string   "type",       default: "Tap"
+    t.integer  "next_id"
+    t.integer  "story_id"
+    t.text     "options"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

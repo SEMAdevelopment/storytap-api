@@ -1,0 +1,3 @@
+class Tap < Transition
+
+end
