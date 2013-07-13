@@ -6,4 +6,8 @@ class Transition < ActiveRecord::Base
   def self.types
     ['Tap', 'Select']
   end
+
+  def has_options?
+    false
+  end
 end
