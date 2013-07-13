@@ -1,4 +1,5 @@
-json.id @story.id
-json.title @story.title
-json.author @story.author_id
-json.description @story.description
+json.partial! 'story', story: @story
+
+json.episodes @story.episodes do |episode|
+  json.partial! 'episodes/episode', episode: episode
+end
