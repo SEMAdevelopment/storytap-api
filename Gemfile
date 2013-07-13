@@ -16,7 +16,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'pg'
 gem 'rails', '4.0.0'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'sass-rails'
 gem 'slim-rails'
 gem 'turbolinks'
