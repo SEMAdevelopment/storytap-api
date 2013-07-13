@@ -1,6 +1,5 @@
 json.count @stories.count
 json.page @stories.current_page
-json.per_page @stories.per_page
 json.stories @stories do |story|
   json.id story.id
   json.title story.title
