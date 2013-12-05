@@ -67,7 +67,7 @@ Devise.setup do |config|
   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
   # a value less than 10 in other environments.
   config.stretches = Rails.env.test? ? 1 : 10
-
+  config.secret_key = 'f358f11922d14140882da7e580b92a2858b7aaaf101be937d98fd31e310febd6d53c4c6021dfa83d9885923f02e2c3e832f0fb1240433bb76faff0fa6b26dc96'
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "427a5d4ec8c91c206039c1aada9e3da9ce1402a1321f3f69663ae8e8c17028d90c217af6e336236ec7bbda3c4cf102e47f61f6eab24193c92eb4d34e65bf650f"
 
@@ -94,7 +94,6 @@ Devise.setup do |config|
 
   # If true, uses the password salt as remember token. This should be turned
   # to false if you are not using database authenticatable.
-  config.use_salt_as_remember_token = true
 
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.
